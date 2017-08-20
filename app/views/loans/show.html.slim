@@ -46,15 +46,16 @@ dl.dl-horizontal
     | Total
   dd
     = @loan.total
-  dt
-    | Payed interest
-  dd
-    = @loan.payed_interest
-  dt
-    | Payed base
-  dd
-    = @loan.payed_base
-  dt
-    | Payed annual interest
-  dd
-    = @loan.payed_annual_interest
+  - if @loan.payments.exists?
+    dt
+      | Payed interest
+    dd
+      = @loan.payed_interest
+    dt
+      | Payed base
+    dd
+      = @loan.payed_base
+    dt
+      | Payed annual interest
+    dd
+      = @loan.payed_annual_interest
