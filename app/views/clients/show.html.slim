@@ -14,3 +14,12 @@ dl.dl-horizontal
     | Name:
   dd
     = @client.name
+  - if @client.loans.exists?
+    dt
+      | Annual optimistic:
+    dd
+      = @client.annual_optimistic
+    dt
+      | Annual realistic:
+    dd
+      = @client.annual_realistic
