@@ -31,7 +31,7 @@
           td
             = loan.client.name
           td
-            = loan.amount
+            = "#{number_to_currency(loan.amount)}"
           td
             = link_to 'Edit', edit_loan_path(loan), class: 'btn btn-warning active btn-sm'
           td

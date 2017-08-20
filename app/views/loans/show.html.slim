@@ -25,36 +25,36 @@ dl.dl-horizontal
   dt
     | Amount:
   dd
-    = @loan.amount
+    = "#{number_to_currency(@loan.amount)}"
   dt
     | Monthly base:
   dd
-    = @loan.monthly_base
+    = "#{number_to_currency(@loan.monthly_base)}"
   dt
     | Monthly interest:
   dd
-    = @loan.monthly_interest
+    = "#{number_to_currency(@loan.monthly_interest)}"
   dt
     | Monthly overdue interest
   dd
-    = @loan.monthly_overdue_interest
+    = "#{number_to_currency(@loan.monthly_overdue_interest)}"
   dt
     | Monthly total
   dd
-    = @loan.monthly_total
+    = "#{number_to_currency(@loan.monthly_total)}"
   dt
     | Total
   dd
-    = @loan.total
+    = "#{number_to_currency(@loan.total)}"
   - if @loan.payments.exists?
     dt
       | Payed interest
     dd
-      = @loan.payed_interest
+      = "#{number_to_currency(@loan.payed_interest)}"
     dt
       | Payed base
     dd
-      = @loan.payed_base
+      = "#{number_to_currency(@loan.payed_base)}"
     dt
       | Payed annual interest
     dd

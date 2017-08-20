@@ -31,11 +31,11 @@
           td
             = payment.loan.name
           td
-            = payment.base
+            = "#{number_to_currency(payment.base)}"
           td
-            = payment.interest
+            = "#{number_to_currency(payment.interest)}"
           td
-            = payment.total
+            = "#{number_to_currency(payment.total)}"
           td
             = link_to 'Edit', edit_payment_path(payment), class: 'btn btn-warning active btn-sm'
           td

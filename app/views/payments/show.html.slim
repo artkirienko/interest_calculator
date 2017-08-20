@@ -17,12 +17,12 @@ dl.dl-horizontal
   dt
     | Base:
   dd
-    = @payment.base
+    = "#{number_to_currency(@payment.base)}"
   dt
     | Interest:
   dd
-    = @payment.interest
+    = "#{number_to_currency(@payment.interest)}"
   dt
     | Total:
   dd
-    = @payment.total
+    = "#{number_to_currency(@payment.total)}"
