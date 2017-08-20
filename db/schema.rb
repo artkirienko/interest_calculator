@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170820135102) do
+ActiveRecord::Schema.define(version: 20170820151005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "clients", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tariffs", force: :cascade do |t|
+    t.string "name"
+    t.integer "term", limit: 2
+    t.decimal "interest", precision: 5, scale: 4
+    t.decimal "overdue_interest", precision: 5, scale: 4
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

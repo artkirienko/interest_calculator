@@ -1,0 +1,28 @@
+- provide(:title, 'Show tariff')
+
+.page-header
+  = link_to tariffs_path, class: 'btn btn-default' do
+    span.glyphicon.glyphicon-list-alt
+    |  Back
+  = link_to edit_tariff_path(@tariff), class: 'btn btn-primary' do
+    span.glyphicon.glyphicon-pencil
+    |  Edit
+  h1
+    | Show tariff
+dl.dl-horizontal
+  dt
+    | Name:
+  dd
+    = @tariff.name
+  dt
+    | Term:
+  dd
+    = @tariff.term
+  dt
+    | Interest:
+  dd
+    = @tariff.interest
+  dt
+    | Overdue interest:
+  dd
+    = @tariff.overdue_interest

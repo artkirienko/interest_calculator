@@ -1,0 +1,38 @@
+- provide(:title, 'Listing tariffs')
+
+.page-header
+  = link_to new_tariff_path, class: 'btn btn-primary' do
+    span.glyphicon.glyphicon-plus
+    |  New Tariff
+  h1
+    | Listing tariffs
+
+.table-responsive
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th
+          | Name
+        th
+          | Term
+        th
+          | Interest
+        th
+          | Overdue interest
+        th
+        th
+    tbody
+      - @tariffs.each do | tariff |
+        tr
+          td
+            = link_to tariff.name, tariff
+          td
+            = tariff.term
+          td
+            = tariff.interest
+          td
+            = tariff.overdue_interest
+          td
+            = link_to 'Edit', edit_tariff_path(tariff), class: 'btn btn-warning active btn-sm'
+          td
+            = link_to 'Destroy', tariff, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger active btn-sm'

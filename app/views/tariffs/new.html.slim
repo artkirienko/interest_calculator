@@ -1,0 +1,10 @@
+- provide(:title, 'New tariff')
+
+.page-header
+  = link_to tariffs_path, class: 'btn btn-default' do
+    span.glyphicon.glyphicon-list-alt
+    |  Back
+  h1
+    | New tariff
+
+= render 'form'
