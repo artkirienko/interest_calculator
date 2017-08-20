@@ -1,0 +1,13 @@
+- provide(:title, 'Editing client')
+
+.page-header
+  = link_to clients_path, class: 'btn btn-default' do
+    span.glyphicon.glyphicon-list-alt
+    |  Back
+  = link_to @client, class: 'btn btn-primary' do
+    span.glyphicon.glyphicon-info-sign
+    |  Show
+  h1
+    | Editing client
+
+= render 'form'
