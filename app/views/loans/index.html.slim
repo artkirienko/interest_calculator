@@ -1,0 +1,38 @@
+- provide(:title, 'Listing loans')
+
+.page-header
+  = link_to new_loan_path, class: 'btn btn-primary' do
+    span.glyphicon.glyphicon-plus
+    |  New Loan
+  h1
+    | Listing loans
+
+.table-responsive
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th
+          | Name
+        th
+          | Tariff
+        th
+          | Client
+        th
+          | Amount
+        th
+        th
+    tbody
+      - @loans.each do | loan |
+        tr
+          td
+            = link_to loan.name, loan
+          td
+            = loan.tariff.name
+          td
+            = loan.client.name
+          td
+            = loan.amount
+          td
+            = link_to 'Edit', edit_loan_path(loan), class: 'btn btn-warning active btn-sm'
+          td
+            = link_to 'Destroy', loan, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger active btn-sm'

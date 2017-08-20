@@ -1,0 +1,10 @@
+- provide(:title, 'New loan')
+
+.page-header
+  = link_to loans_path, class: 'btn btn-default' do
+    span.glyphicon.glyphicon-list-alt
+    |  Back
+  h1
+    | New loan
+
+= render 'form'

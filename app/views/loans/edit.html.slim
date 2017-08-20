@@ -1,0 +1,13 @@
+- provide(:title, 'Editing loan')
+
+.page-header
+  = link_to loans_path, class: 'btn btn-default' do
+    span.glyphicon.glyphicon-list-alt
+    |  Back
+  = link_to @loan, class: 'btn btn-primary' do
+    span.glyphicon.glyphicon-info-sign
+    |  Show
+  h1
+    | Editing loan
+
+= render 'form'

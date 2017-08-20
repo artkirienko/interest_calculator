@@ -1,4 +1,6 @@
 class Tariff < ApplicationRecord
+  has_many :loans
+
   validates :name, presence: true
   validates :term, numericality: { only_integer: true,
                                  greater_than_or_equal_to: 1,
