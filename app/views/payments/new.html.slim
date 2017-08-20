@@ -1,0 +1,10 @@
+- provide(:title, 'New payment')
+
+.page-header
+  = link_to payments_path, class: 'btn btn-default' do
+    span.glyphicon.glyphicon-list-alt
+    |  Back
+  h1
+    | New payment
+
+= render 'form'

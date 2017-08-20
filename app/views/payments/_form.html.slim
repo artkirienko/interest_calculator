@@ -1,0 +1,27 @@
+= form_for(@payment, html: { class: "form-horizontal", role: "form" }) do |f|
+  - if @payment.errors.any?
+    .alert.alert-danger.alert-dismissable role="alert"
+      button.close type="button" data-dismiss="alert"
+        span aria-hidden="true"
+          | &times;
+        span.sr-only
+          | Close
+      h4= "#{pluralize(@payment.errors.count,"error")} prohibited this payment from being saved:"
+      ul
+        - @payment.errors.full_messages.each do |msg|
+          li= msg
+  .form-group
+    = f.label :loan, class: "col-sm-2 control-label"
+    .col-sm-10
+      = select("payment", "loan_id", Loan.all.collect {|l| [ l.name, l.id ] }, { include_blank: true }, class: "form-control")
+  .form-group
+    = f.label :base, class: "col-sm-2 control-label"
+    .col-sm-10
+      = f.text_field :base, class: "form-control"
+  .form-group
+    = f.label :interest, class: "col-sm-2 control-label"
+    .col-sm-10
+      = f.text_field :interest, class: "form-control"
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      = f.submit class: "btn btn-primary"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170820152655) do
+ActiveRecord::Schema.define(version: 20170820181107) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,15 @@ ActiveRecord::Schema.define(version: 20170820152655) do
     t.index ["tariff_id"], name: "index_loans_on_tariff_id"
   end
 
+  create_table "payments", force: :cascade do |t|
+    t.bigint "loan_id"
+    t.decimal "base", precision: 14, scale: 2
+    t.decimal "interest", precision: 14, scale: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["loan_id"], name: "index_payments_on_loan_id"
+  end
+
   create_table "tariffs", force: :cascade do |t|
     t.string "name"
     t.integer "term", limit: 2
@@ -43,4 +52,5 @@ ActiveRecord::Schema.define(version: 20170820152655) do
 
   add_foreign_key "loans", "clients"
   add_foreign_key "loans", "tariffs"
+  add_foreign_key "payments", "loans"
 end

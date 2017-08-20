@@ -1,0 +1,24 @@
+- provide(:title, 'Show payment')
+
+.page-header
+  = link_to payments_path, class: 'btn btn-default' do
+    span.glyphicon.glyphicon-list-alt
+    |  Back
+  = link_to edit_payment_path(@payment), class: 'btn btn-primary' do
+    span.glyphicon.glyphicon-pencil
+    |  Edit
+  h1
+    | Show payment
+dl.dl-horizontal
+  dt
+    | Loan:
+  dd
+    = @payment.loan.name
+  dt
+    | Base:
+  dd
+    = @payment.base
+  dt
+    | Interest:
+  dd
+    = @payment.interest

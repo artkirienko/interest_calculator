@@ -1,6 +1,7 @@
 class Loan < ApplicationRecord
   belongs_to :tariff
   belongs_to :client
+  has_many :payments
 
   validates :name, presence: true
   validates :amount, numericality: true,

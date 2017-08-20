@@ -1,0 +1,38 @@
+- provide(:title, 'Listing payments')
+
+.page-header
+  = link_to new_payment_path, class: 'btn btn-primary' do
+    span.glyphicon.glyphicon-plus
+    |  New Payment
+  h1
+    | Listing payments
+
+.table-responsive
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th
+          | id
+        th
+          | Loan
+        th
+          | Base
+        th
+          | Interest
+        th
+        th
+    tbody
+      - @payments.each do | payment |
+        tr
+          td
+            = link_to payment.id, payment
+          td
+            = payment.loan.name
+          td
+            = payment.base
+          td
+            = payment.interest
+          td
+            = link_to 'Edit', edit_payment_path(payment), class: 'btn btn-warning active btn-sm'
+          td
+            = link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger active btn-sm'
