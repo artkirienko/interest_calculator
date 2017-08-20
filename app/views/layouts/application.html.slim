@@ -24,13 +24,13 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          = link_to "Interest Calculator", "/", class: "navbar-brand"
+          = link_to t('interest_calculator'), "/", class: "navbar-brand"
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav
-            = nav_link('Clients', clients_path)
-            = nav_link('Tariffs', tariffs_path)
-            = nav_link('Loans', loans_path)
-            = nav_link('Payments', payments_path)
+            = nav_link(t('clients'), clients_path)
+            = nav_link(t('tariffs'), tariffs_path)
+            = nav_link(t('loans'), loans_path)
+            = nav_link(t('payments'), payments_path)
     .container
       - flash.each do |name, msg|
         = content_tag :div, class: "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable", role: "alert" do

@@ -31,3 +31,43 @@
 
 en:
   hello: "Hello world"
+  interest_calculator: 'Interest Calculator'
+  clients: 'Clients'
+  tariffs: 'Tariffs'
+  loans: 'Loans'
+  payments: 'Payments'
+  activerecord:
+    models:
+      client: 'Client'
+      tariff: 'Tariff'
+      loan: 'Loan'
+      payment: 'Payment'
+    attributes:
+      payment:
+        id: 'id'
+        loan: 'Loan'
+        base: 'Base'
+        interest: 'Interest'
+        total: 'Total'
+      tariff:
+        name: 'Name'
+        term: 'Term'
+        interest: 'Interest'
+        overdue_interest: 'Overdue interest'
+      client:
+        name: 'Name'
+        annual_optimistic: 'Annual optimistic'
+        annual_realistic: 'Annual realistic'
+      loan:
+        name: 'Name'
+        tariff: 'Tariff'
+        client: 'Client'
+        amount: 'Amount'
+        monthly_base: 'Monthly base'
+        monthly_interest: 'Monthly interest'
+        monthly_overdue_interest: 'Monthly overdue interest'
+        monthly_total: 'Monthly total'
+        total: 'Total'
+        payed_interest: 'Payed interest'
+        payed_base: 'Payed base'
+        payed_annual_interest: 'Payed annual interest'

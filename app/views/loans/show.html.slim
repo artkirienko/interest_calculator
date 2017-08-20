@@ -11,51 +11,51 @@
     | Show loan
 dl.dl-horizontal
   dt
-    | Name:
+    = t('activerecord.attributes.loan.name')
   dd
     = @loan.name
   dt
-    | Tariff:
+    = t('activerecord.attributes.loan.tariff')
   dd
     = @loan.tariff.name
   dt
-    | Client:
+    = t('activerecord.attributes.loan.client')
   dd
     = @loan.client.name
   dt
-    | Amount:
+    = t('activerecord.attributes.loan.amount')
   dd
     = "#{number_to_currency(@loan.amount)}"
-  dt
-    | Monthly base:
+  dt style='white-space: normal;'
+    = t('activerecord.attributes.loan.monthly_base')
   dd
     = "#{number_to_currency(@loan.monthly_base)}"
   dt
-    | Monthly interest:
+    = t('activerecord.attributes.loan.monthly_interest')
   dd
     = "#{number_to_currency(@loan.monthly_interest)}"
-  dt
-    | Monthly overdue interest
+  dt style='white-space: normal;'
+    = t('activerecord.attributes.loan.monthly_overdue_interest')
   dd
     = "#{number_to_currency(@loan.monthly_overdue_interest)}"
   dt
-    | Monthly total
+    = t('activerecord.attributes.loan.monthly_total')
   dd
     = "#{number_to_currency(@loan.monthly_total)}"
   dt
-    | Total
+    = t('activerecord.attributes.loan.total')
   dd
     = "#{number_to_currency(@loan.total)}"
   - if @loan.payments.exists?
     dt
-      | Payed interest
+      = t('activerecord.attributes.loan.payed_interest')
     dd
       = "#{number_to_currency(@loan.payed_interest)}"
     dt
-      | Payed base
+      = t('activerecord.attributes.loan.payed_base')
     dd
       = "#{number_to_currency(@loan.payed_base)}"
     dt
-      | Payed annual interest
+      = t('activerecord.attributes.loan.payed_annual_interest')
     dd
       = "#{number_to_percentage(@loan.payed_annual_interest * 100, precision: 2, strip_insignificant_zeros: true)}"

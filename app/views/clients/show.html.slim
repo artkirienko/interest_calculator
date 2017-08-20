@@ -11,15 +11,15 @@
     | Show client
 dl.dl-horizontal
   dt
-    | Name:
+    = t('activerecord.attributes.client.name')
   dd
     = @client.name
   - if @client.loans.exists?
-    dt
-      | Annual optimistic:
+    dt style='white-space: normal;'
+      = t('activerecord.attributes.client.annual_optimistic')
     dd
       = "#{number_to_percentage(@client.annual_optimistic * 100, precision: 2, strip_insignificant_zeros: true)}"
-    dt
-      | Annual realistic:
+    dt style='white-space: normal;'
+      = t('activerecord.attributes.client.annual_realistic')
     dd
       = "#{number_to_percentage(@client.annual_realistic * 100, precision: 2, strip_insignificant_zeros: true)}"

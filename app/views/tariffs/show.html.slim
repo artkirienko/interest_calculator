@@ -11,18 +11,18 @@
     | Show tariff
 dl.dl-horizontal
   dt
-    | Name:
+    = t('activerecord.attributes.tariff.name')
   dd
     = @tariff.name
   dt
-    | Term:
+    = t('activerecord.attributes.tariff.term')
   dd
     = @tariff.term
   dt
-    | Interest:
+    = t('activerecord.attributes.tariff.interest')
   dd
     = "#{number_to_percentage(@tariff.interest * 100, precision: 2, strip_insignificant_zeros: true)}"
   dt
-    | Overdue interest:
+    = t('activerecord.attributes.tariff.overdue_interest')
   dd
     = "#{number_to_percentage(@tariff.overdue_interest * 100, precision: 2, strip_insignificant_zeros: true)}"

@@ -11,18 +11,18 @@
     | Show payment
 dl.dl-horizontal
   dt
-    | Loan:
+    = t('activerecord.attributes.payment.loan')
   dd
     = @payment.loan.name
   dt
-    | Base:
+    = t('activerecord.attributes.payment.base')
   dd
     = "#{number_to_currency(@payment.base)}"
   dt
-    | Interest:
+    = t('activerecord.attributes.payment.interest')
   dd
     = "#{number_to_currency(@payment.interest)}"
   dt
-    | Total:
+    = t('activerecord.attributes.payment.total')
   dd
     = "#{number_to_currency(@payment.total)}"

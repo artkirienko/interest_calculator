@@ -265,3 +265,43 @@ ru:
       long: "%d %B %Y, %H:%M"
       short: "%d %b, %H:%M"
     pm: вечера
+  interest_calculator: 'Калькулятор Доходности'
+  clients: 'Инвесторы'
+  tariffs: 'Тарифы'
+  loans: 'Займы'
+  payments: 'Платежи'
+  activerecord:
+    models:
+      client: 'инвестор'
+      tariff: 'тариф'
+      loan: 'займ'
+      payment: 'платеж'
+    attributes:
+      payment:
+        id: '№'
+        loan: 'Займ'
+        base: 'Платеж по ОД'
+        interest: 'Платеж по %'
+        total: 'Платеж всего'
+      tariff:
+        name: 'Название'
+        term: 'Срок'
+        interest: 'Ставка годовых'
+        overdue_interest: 'Ставка при просрочке'
+      client:
+        name: 'Название'
+        annual_optimistic: 'Годовая доходность оптимистичная'
+        annual_realistic: 'Годовая доходность реалистичная'
+      loan:
+        name: 'Название'
+        tariff: 'Тариф'
+        client: 'Инвестор'
+        amount: 'Сумма'
+        monthly_base: 'Ежемесячный по долгу'
+        monthly_interest: 'Ежемесячный по %'
+        monthly_overdue_interest: 'Ежемесячный при просрочке'
+        monthly_total: 'Общий ежемесячный'
+        total: 'Сумма выплаты'
+        payed_interest: 'Выплачено %'
+        payed_base: 'Выплачено ОД'
+        payed_annual_interest: 'Доходность годовых'
