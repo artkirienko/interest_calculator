@@ -20,6 +20,8 @@
         th
           | Interest
         th
+          | Total
+        th
         th
     tbody
       - @payments.each do | payment |
@@ -32,6 +34,8 @@
             = payment.base
           td
             = payment.interest
+          td
+            = payment.total
           td
             = link_to 'Edit', edit_payment_path(payment), class: 'btn btn-warning active btn-sm'
           td

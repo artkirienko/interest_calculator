@@ -37,5 +37,6 @@ RSpec.describe "payments/index", type: :view do
     assert_select "tr>td", :text => loan.name.to_s, :count => 2
     assert_select "tr>td", :text => "24.55".to_s, :count => 2
     assert_select "tr>td", :text => "39.99".to_s, :count => 2
+    assert_select "tr>td", :text => "64.54".to_s, :count => 2
   end
 end

@@ -7,4 +7,8 @@ class Payment < ApplicationRecord
   validates :interest, numericality: true,
                        format: { with: /\A\d{1,12}(\.\d{1,2})?\z/,
                                  message: "should be money" }
+
+  def total
+    base + interest
+  end
 end

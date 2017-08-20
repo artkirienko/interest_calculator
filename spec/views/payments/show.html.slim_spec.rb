@@ -30,5 +30,6 @@ RSpec.describe "payments/show", type: :view do
     expect(rendered).to match(/Telegram, LLC/)
     expect(rendered).to match(/9\.99/)
     expect(rendered).to match(/9\.99/)
+    expect(rendered).to match(/19\.98/)
   end
 end
