@@ -5,7 +5,7 @@
   "repository": "https://github.com/artkirienko/interest_calculator",
   "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ruby_on_Rails_logo.svg",
   "scripts": {
-    "postdeploy": "bundle exec rails db:migrate"
+    "postdeploy": "bundle exec rails db:migrate; bundle exec rails scenarios:first"
   },
   "env": {
     "RAILS_ENV": "production",
