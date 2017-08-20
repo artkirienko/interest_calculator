@@ -45,7 +45,10 @@
 
 ## How to run the test suite
 
-`bundle exec rspec`
+```
+RAILS_ENV=test bundle exec rails db:migrate
+bundle exec rspec
+```
 
 ## Services (job queues, cache servers, search engines, etc.)
 
