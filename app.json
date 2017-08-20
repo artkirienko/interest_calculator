@@ -1,0 +1,16 @@
+{
+  "name": "Interest Calculator",
+  "description": "Homework",
+  "website": "https://github.com/artkirienko",
+  "repository": "https://github.com/artkirienko/interest_calculator",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ruby_on_Rails_logo.svg",
+  "scripts": {
+    "postdeploy": "bundle exec rails db:migrate"
+  },
+  "env": {
+    "RAILS_ENV": "production",
+    "RACK_ENV": "production",
+    "RAILS_SERVE_STATIC_FILES": "true"
+  },
+  "addons": ["heroku-postgresql"]
+}

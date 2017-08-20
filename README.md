@@ -50,3 +50,5 @@
 ## Services (job queues, cache servers, search engines, etc.)
 
 ## Deployment instructions
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
