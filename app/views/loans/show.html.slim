@@ -58,4 +58,4 @@ dl.dl-horizontal
     dt
       | Payed annual interest
     dd
-      = @loan.payed_annual_interest
+      = "#{number_to_percentage(@loan.payed_annual_interest * 100, precision: 2, strip_insignificant_zeros: true)}"

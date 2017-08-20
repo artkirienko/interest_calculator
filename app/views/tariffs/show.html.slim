@@ -21,8 +21,8 @@ dl.dl-horizontal
   dt
     | Interest:
   dd
-    = @tariff.interest
+    = "#{number_to_percentage(@tariff.interest * 100, precision: 2, strip_insignificant_zeros: true)}"
   dt
     | Overdue interest:
   dd
-    = @tariff.overdue_interest
+    = "#{number_to_percentage(@tariff.overdue_interest * 100, precision: 2, strip_insignificant_zeros: true)}"

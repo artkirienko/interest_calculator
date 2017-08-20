@@ -18,8 +18,8 @@ dl.dl-horizontal
     dt
       | Annual optimistic:
     dd
-      = @client.annual_optimistic
+      = "#{number_to_percentage(@client.annual_optimistic * 100, precision: 2, strip_insignificant_zeros: true)}"
     dt
       | Annual realistic:
     dd
-      = @client.annual_realistic
+      = "#{number_to_percentage(@client.annual_realistic * 100, precision: 2, strip_insignificant_zeros: true)}"

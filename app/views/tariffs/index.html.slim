@@ -29,9 +29,9 @@
           td
             = tariff.term
           td
-            = tariff.interest
+            = "#{number_to_percentage(tariff.interest * 100, precision: 2, strip_insignificant_zeros: true)}"
           td
-            = tariff.overdue_interest
+            = "#{number_to_percentage(tariff.overdue_interest * 100, precision: 2, strip_insignificant_zeros: true)}"
           td
             = link_to 'Edit', edit_tariff_path(tariff), class: 'btn btn-warning active btn-sm'
           td
