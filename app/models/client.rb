@@ -1,6 +1,7 @@
 class Client < ApplicationRecord
   has_many :loans, dependent: :destroy
-  validates :name, presence: true
+  validates :name, presence: true,
+                   uniqueness: true
 
   def annual_realistic
     payed_interest = loans.inject(0.0) {|sum, loan| sum += loan.payed_interest}

@@ -1,7 +1,8 @@
 class Tariff < ApplicationRecord
   has_many :loans, dependent: :destroy
 
-  validates :name, presence: true
+  validates :name, presence: true,
+                   uniqueness: true
   validates :term, numericality: { only_integer: true,
                                  greater_than_or_equal_to: 1,
                                  less_than_or_equal_to: 1200 }

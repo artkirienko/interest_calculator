@@ -3,7 +3,8 @@ class Loan < ApplicationRecord
   belongs_to :client
   has_many :payments, dependent: :destroy
 
-  validates :name, presence: true
+  validates :name, presence: true,
+                   uniqueness: true
   validates :amount, numericality: true,
                        format: { with: /\A\d{1,12}(\.\d{1,2})?\z/,
                                  message: I18n.t('should_be_money') }
