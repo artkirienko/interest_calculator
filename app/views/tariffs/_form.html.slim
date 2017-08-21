@@ -5,7 +5,7 @@
         span aria-hidden="true"
           | &times;
         span.sr-only
-          | Close
+          = t('close')
       h4= "#{t('errors.template.header', model: t('activerecord.models.tariff').mb_chars.capitalize, count: @tariff.errors.count)}"
       ul
         - @tariff.errors.full_messages.each do |msg|

@@ -269,6 +269,7 @@ ru:
   destroy: 'Удалить'
   back: 'Вернуться'
   show: 'Просмотр'
+  close: 'Закрыть'
   interest_calculator: 'Калькулятор Доходности'
   clients: 'Инвесторы'
   tariffs: 'Тарифы'

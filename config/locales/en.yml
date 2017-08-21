@@ -35,6 +35,7 @@ en:
   destroy: 'Destroy'
   back: 'Back'
   show: 'Show'
+  close: 'Close'
   interest_calculator: 'Interest Calculator'
   clients: 'Clients'
   tariffs: 'Tariffs'
