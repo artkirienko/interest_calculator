@@ -54,4 +54,17 @@ bundle exec rspec
 
 ## Deployment instructions
 
+* Нажмите кнопку и приложение вместе с данными ЮЛ-1, ЮЛ-2, ЮЛ-3 и их платежами
+будет развёрнуто на вашем аккаунте **Heroku**
+
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+## Development instructions
+
+Чтобы развернуть локально:
+
+* Внесите изменения в `database.yml`, если это необходимо
+
+* Выполните `bundle exec rails db:create db:migrate scenarios:first`
+(задача **scenarios:first** предназначена для генерации ЮЛ-1, ЮЛ-2, ЮЛ-3
+и их платежей в базе)
