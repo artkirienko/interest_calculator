@@ -1,11 +1,11 @@
-- provide(:title, 'Listing payments')
+- provide(:title, t('listing_payments'))
 
 .page-header
   = link_to new_payment_path, class: 'btn btn-primary' do
     span.glyphicon.glyphicon-plus
-    |  New Payment
+    = " #{t('new_payment_button')}"
   h1
-    | Listing payments
+    = t('listing_payments')
 
 .table-responsive
   table.table.table-striped.table-bordered.table-hover
@@ -37,6 +37,6 @@
           td
             = "#{number_to_currency(payment.total)}"
           td
-            = link_to 'Edit', edit_payment_path(payment), class: 'btn btn-warning active btn-sm'
+            = link_to t('edit'), edit_payment_path(payment), class: 'btn btn-warning active btn-sm'
           td
-            = link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger active btn-sm'
+            = link_to t('destroy'), payment, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-danger active btn-sm'

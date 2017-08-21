@@ -3,8 +3,8 @@
 .page-header
   = link_to payments_path, class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back
+    = " #{t('back')}"
   h1
-    | New payment
+    = t('new_payment')
 
 = render 'form'

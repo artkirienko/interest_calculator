@@ -3,8 +3,8 @@
 .page-header
   = link_to loans_path, class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back
+    = " #{t('back')}"
   h1
-    | New loan
+    = t('new_loan')
 
 = render 'form'

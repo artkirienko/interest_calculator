@@ -1,11 +1,11 @@
-- provide(:title, 'Listing loans')
+- provide(:title, t('listing_loans'))
 
 .page-header
   = link_to new_loan_path, class: 'btn btn-primary' do
     span.glyphicon.glyphicon-plus
-    |  New Loan
+    = " #{t('new_loan_button')}"
   h1
-    | Listing loans
+    = t('listing_loans')
 
 .table-responsive
   table.table.table-striped.table-bordered.table-hover
@@ -33,6 +33,6 @@
           td
             = "#{number_to_currency(loan.amount)}"
           td
-            = link_to 'Edit', edit_loan_path(loan), class: 'btn btn-warning active btn-sm'
+            = link_to t('edit'), edit_loan_path(loan), class: 'btn btn-warning active btn-sm'
           td
-            = link_to 'Destroy', loan, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger active btn-sm'
+            = link_to t('destroy'), loan, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-danger active btn-sm'

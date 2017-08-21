@@ -3,8 +3,8 @@
 .page-header
   = link_to tariffs_path, class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back
+    = " #{t('back')}"
   h1
-    | New tariff
+    = t('new_tariff')
 
 = render 'form'

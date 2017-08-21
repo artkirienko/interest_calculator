@@ -1,11 +1,11 @@
-- provide(:title, 'Listing tariffs')
+- provide(:title, t('listing_tariffs'))
 
 .page-header
   = link_to new_tariff_path, class: 'btn btn-primary' do
     span.glyphicon.glyphicon-plus
-    |  New Tariff
+    = " #{t('new_tariff_button')}"
   h1
-    | Listing tariffs
+    = t('listing_tariffs')
 
 .table-responsive
   table.table.table-striped.table-bordered.table-hover
@@ -33,6 +33,6 @@
           td
             = "#{number_to_percentage(tariff.overdue_interest * 100, precision: 2, strip_insignificant_zeros: true)}"
           td
-            = link_to 'Edit', edit_tariff_path(tariff), class: 'btn btn-warning active btn-sm'
+            = link_to t('edit'), edit_tariff_path(tariff), class: 'btn btn-warning active btn-sm'
           td
-            = link_to 'Destroy', tariff, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger active btn-sm'
+            = link_to t('destroy'), tariff, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-danger active btn-sm'

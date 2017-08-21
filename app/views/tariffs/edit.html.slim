@@ -3,11 +3,11 @@
 .page-header
   = link_to tariffs_path, class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back
+    = " #{t('back')}"
   = link_to @tariff, class: 'btn btn-primary' do
     span.glyphicon.glyphicon-info-sign
-    |  Show
+    = " #{t('show')}"
   h1
-    | Editing tariff
+    = t('editing_tariff')
 
 = render 'form'

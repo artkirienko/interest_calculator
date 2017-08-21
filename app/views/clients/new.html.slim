@@ -3,8 +3,8 @@
 .page-header
   = link_to clients_path, class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back
+    = " #{t('back')}"
   h1
-    | New client
+    = t('new_client')
 
 = render 'form'

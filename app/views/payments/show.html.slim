@@ -1,14 +1,14 @@
-- provide(:title, 'Show payment')
+- provide(:title, t('show_payment', loan_name: @payment.loan.name))
 
 .page-header
   = link_to payments_path, class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back
+    = " #{t('back')}"
   = link_to edit_payment_path(@payment), class: 'btn btn-primary' do
     span.glyphicon.glyphicon-pencil
-    |  Edit
+    = " #{t('edit')}"
   h1
-    | Show payment
+    = t('show_payment', loan_name: @payment.loan.name)
 dl.dl-horizontal
   dt
     = t('activerecord.attributes.payment.loan')

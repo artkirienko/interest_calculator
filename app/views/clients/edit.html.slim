@@ -3,11 +3,11 @@
 .page-header
   = link_to clients_path, class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back
+    = " #{t('back')}"
   = link_to @client, class: 'btn btn-primary' do
     span.glyphicon.glyphicon-info-sign
-    |  Show
+    = " #{t('show')}"
   h1
-    | Editing client
+    = t('editing_client')
 
 = render 'form'

@@ -1,14 +1,14 @@
-- provide(:title, 'Show tariff')
+- provide(:title, t('show_tariff', tariff_name: @tariff.name))
 
 .page-header
   = link_to tariffs_path, class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back
+    = " #{t('back')}"
   = link_to edit_tariff_path(@tariff), class: 'btn btn-primary' do
     span.glyphicon.glyphicon-pencil
-    |  Edit
+    = " #{t('edit')}"
   h1
-    | Show tariff
+    = t('show_tariff', tariff_name: @tariff.name)
 dl.dl-horizontal
   dt
     = t('activerecord.attributes.tariff.name')

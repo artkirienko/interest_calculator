@@ -1,14 +1,14 @@
-- provide(:title, 'Show loan')
+- provide(:title, t('show_loan', loan_name: @loan.name))
 
 .page-header
   = link_to loans_path, class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back
+    = " #{t('back')}"
   = link_to edit_loan_path(@loan), class: 'btn btn-primary' do
     span.glyphicon.glyphicon-pencil
-    |  Edit
+    = " #{t('edit')}"
   h1
-    | Show loan
+    = t('show_loan', loan_name: @loan.name)
 dl.dl-horizontal
   dt
     = t('activerecord.attributes.loan.name')
