@@ -37,10 +37,10 @@ en:
   show: 'Show'
   close: 'Close'
   interest_calculator: 'Interest Calculator'
-  clients: 'Clients'
-  tariffs: 'Tariffs'
-  loans: 'Loans'
-  payments: 'Payments'
+  clients_nav: 'Clients'
+  tariffs_nav: 'Tariffs'
+  loans_nav: 'Loans'
+  payments_nav: 'Payments'
   activerecord:
     models:
       client: 'Client'
@@ -98,3 +98,31 @@ en:
   are_you_sure: 'Are you sure?'
   should_be_money: 'should be money'
   should_be_percent: 'should be percent'
+  clients:
+    create:
+      notice: 'Client was successfully created.'
+    update:
+      notice: 'Client was successfully updated.'
+    destroy:
+      notice: 'Client was successfully destroyed.'
+  loans:
+    create:
+      notice: 'Loan was successfully created.'
+    update:
+      notice: 'Loan was successfully updated.'
+    destroy:
+      notice: 'Loan was successfully destroyed.'
+  payments:
+    create:
+      notice: 'Payment was successfully created.'
+    update:
+      notice: 'Payment was successfully updated.'
+    destroy:
+      notice: 'Payment was successfully destroyed.'
+  tariffs:
+    create:
+      notice: 'Tariff was successfully created.'
+    update:
+      notice: 'Tariff was successfully updated.'
+    destroy:
+      notice: 'Tariff was successfully destroyed.'

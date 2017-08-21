@@ -28,7 +28,7 @@ class TariffsController < ApplicationController
 
     respond_to do |format|
       if @tariff.save
-        format.html { redirect_to @tariff, notice: 'Tariff was successfully created.' }
+        format.html { redirect_to @tariff, notice: t('tariffs.create.notice') }
         format.json { render :show, status: :created, location: @tariff }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class TariffsController < ApplicationController
   def update
     respond_to do |format|
       if @tariff.update(tariff_params)
-        format.html { redirect_to @tariff, notice: 'Tariff was successfully updated.' }
+        format.html { redirect_to @tariff, notice: t('tariffs.update.notice') }
         format.json { render :show, status: :ok, location: @tariff }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class TariffsController < ApplicationController
   def destroy
     @tariff.destroy
     respond_to do |format|
-      format.html { redirect_to tariffs_url, notice: 'Tariff was successfully destroyed.' }
+      format.html { redirect_to tariffs_url, notice: t('tariffs.destroy.notice') }
       format.json { head :no_content }
     end
   end

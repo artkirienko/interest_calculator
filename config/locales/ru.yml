@@ -271,10 +271,10 @@ ru:
   show: 'Просмотр'
   close: 'Закрыть'
   interest_calculator: 'Калькулятор Доходности'
-  clients: 'Инвесторы'
-  tariffs: 'Тарифы'
-  loans: 'Займы'
-  payments: 'Платежи'
+  clients_nav: 'Инвесторы'
+  tariffs_nav: 'Тарифы'
+  loans_nav: 'Займы'
+  payments_nav: 'Платежи'
   activerecord:
     models:
       client: 'инвестор'
@@ -332,3 +332,31 @@ ru:
   are_you_sure: 'Вы уверены?'
   should_be_money: '— денежный тип'
   should_be_percent: '— процент'
+  clients:
+    create:
+      notice: 'Инвестор успешно создан.'
+    update:
+      notice: 'Инвестор успешно отредактирован.'
+    destroy:
+      notice: 'Инвестор удален.'
+  loans:
+    create:
+      notice: 'Займ успешно создан.'
+    update:
+      notice: 'Займ успешно отредактирован.'
+    destroy:
+      notice: 'Займ удален.'
+  payments:
+    create:
+      notice: 'Платеж успешно добавлен.'
+    update:
+      notice: 'Платеж успешно отредактирован.'
+    destroy:
+      notice: 'Платеж удален.'
+  tariffs:
+    create:
+      notice: 'Тариф успешно создан.'
+    update:
+      notice: 'Тариф успешно изменен.'
+    destroy:
+      notice: 'Тариф удален.'

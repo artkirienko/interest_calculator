@@ -27,10 +27,10 @@ html
           = link_to t('interest_calculator'), "/", class: "navbar-brand"
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav
-            = nav_link(t('clients'), clients_path)
-            = nav_link(t('tariffs'), tariffs_path)
-            = nav_link(t('loans'), loans_path)
-            = nav_link(t('payments'), payments_path)
+            = nav_link(t('clients_nav'), clients_path)
+            = nav_link(t('tariffs_nav'), tariffs_path)
+            = nav_link(t('loans_nav'), loans_path)
+            = nav_link(t('payments_nav'), payments_path)
     .container
       - flash.each do |name, msg|
         = content_tag :div, class: "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable", role: "alert" do
@@ -38,7 +38,7 @@ html
             span aria-hidden="true"
               | &times;
             span.sr-only
-              | Close
+              = t('close')
           = msg
       = yield
       = render 'layouts/footer'
