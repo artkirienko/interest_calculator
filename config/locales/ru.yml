@@ -329,3 +329,5 @@ ru:
   new_loan_button: 'Новый займ'
   new_payment_button: 'Добавить платеж'
   are_you_sure: 'Вы уверены?'
+  should_be_money: '— денежный тип'
+  should_be_percent: '— процент'

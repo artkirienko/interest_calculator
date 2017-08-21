@@ -95,3 +95,5 @@ en:
   new_loan_button: 'New Loan'
   new_payment_button: 'New Payment'
   are_you_sure: 'Are you sure?'
+  should_be_money: 'should be money'
+  should_be_percent: 'should be percent'

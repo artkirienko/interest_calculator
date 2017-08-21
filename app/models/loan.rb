@@ -6,7 +6,7 @@ class Loan < ApplicationRecord
   validates :name, presence: true
   validates :amount, numericality: true,
                        format: { with: /\A\d{1,12}(\.\d{1,2})?\z/,
-                                 message: "should be money" }
+                                 message: I18n.t('should_be_money') }
 
   def monthly_base
     1.0 * amount / tariff.term

@@ -7,8 +7,8 @@ class Tariff < ApplicationRecord
                                  less_than_or_equal_to: 1200 }
   validates :interest, numericality: true,
                        format: { with: /\A\d(\.\d{1,4})?\z/,
-                                 message: "should be percent" }
+                                 message: I18n.t('should_be_percent') }
   validates :overdue_interest, numericality: true,
                                format: { with: /\A\d(\.\d{1,4})?\z/,
-                                         message: "should be percent" }
+                                         message: I18n.t('should_be_percent') }
 end
