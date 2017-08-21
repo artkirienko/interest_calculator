@@ -28,8 +28,8 @@ RSpec.describe "payments/show", type: :view do
   it "renders attributes in <p>" do
     render
     expect(rendered).to match(/Telegram, LLC/)
-    expect(rendered).to match(/9\.99/)
-    expect(rendered).to match(/9\.99/)
-    expect(rendered).to match(/19\.98/)
+    expect(rendered).to match(number_to_currency(9.99))
+    expect(rendered).to match(number_to_currency(9.99))
+    expect(rendered).to match(number_to_currency(19.98))
   end
 end

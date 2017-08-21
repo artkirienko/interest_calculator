@@ -35,8 +35,8 @@ RSpec.describe "payments/index", type: :view do
   it "renders a list of payments" do
     render
     assert_select "tr>td", :text => loan.name.to_s, :count => 2
-    assert_select "tr>td", :text => "24.55".to_s, :count => 2
-    assert_select "tr>td", :text => "39.99".to_s, :count => 2
-    assert_select "tr>td", :text => "64.54".to_s, :count => 2
+    assert_select "tr>td", :text => number_to_currency(24.55), :count => 2
+    assert_select "tr>td", :text => number_to_currency(39.99), :count => 2
+    assert_select "tr>td", :text => number_to_currency(64.54), :count => 2
   end
 end

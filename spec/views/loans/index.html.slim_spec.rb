@@ -14,13 +14,13 @@ RSpec.describe "loans/index", type: :view do
   before(:each) do
     assign(:loans, [
       Loan.create!(
-        :name => "Name",
+        :name => "VK, LLC",
         :tariff => tariff,
         :client => client,
         :amount => "9.99"
       ),
       Loan.create!(
-        :name => "Name",
+        :name => "Telegram, LLC",
         :tariff => tariff,
         :client => client,
         :amount => "9.99"
@@ -30,9 +30,10 @@ RSpec.describe "loans/index", type: :view do
 
   it "renders a list of loans" do
     render
-    assert_select "tr>td", :text => "Name".to_s, :count => 2
+    assert_select "tr>td>a", :text => "VK, LLC".to_s, :count => 1
+    assert_select "tr>td>a", :text => "Telegram, LLC".to_s, :count => 1
     assert_select "tr>td", :text => tariff.name.to_s, :count => 2
     assert_select "tr>td", :text => client.name.to_s, :count => 2
-    assert_select "tr>td", :text => "9.99".to_s, :count => 2
+    assert_select "tr>td", :text => "#{number_to_currency(9.99)}", :count => 2
   end
 end
