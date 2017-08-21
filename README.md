@@ -29,6 +29,8 @@
 на GitLab/GitHub/Bitbucket с инструкцией по деплою приложения. Как максимум —
 развернуть приложение на Heroku/VPS.
 
+![db_schema.png](https://raw.githubusercontent.com/artkirienko/interest_calculator/master/db/schema.png)
+
 ## Ruby version
 
 2.4.1
