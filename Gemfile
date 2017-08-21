@@ -34,6 +34,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'bullet'
   gem 'rails_layout'
   gem 'bootstrap-generators', '~> 3.3.4'
   gem 'web-console', '>= 3.3.0'
