@@ -6,7 +6,7 @@
           | &times;
         span.sr-only
           | Close
-      h4= "#{pluralize(@payment.errors.count,"error")} prohibited this payment from being saved:"
+      h4= "#{t('errors.template.header', model: t('activerecord.models.payment').mb_chars.capitalize, count: @payment.errors.count)}"
       ul
         - @payment.errors.full_messages.each do |msg|
           li= msg

@@ -6,7 +6,7 @@
           | &times;
         span.sr-only
           | Close
-      h4= "#{pluralize(@client.errors.count,"error")} prohibited this client from being saved:"
+      h4= "#{t('errors.template.header', model: t('activerecord.models.client').mb_chars.capitalize, count: @client.errors.count)}"
       ul
         - @client.errors.full_messages.each do |msg|
           li= msg

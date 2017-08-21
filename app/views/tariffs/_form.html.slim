@@ -6,7 +6,7 @@
           | &times;
         span.sr-only
           | Close
-      h4= "#{pluralize(@tariff.errors.count,"error")} prohibited this tariff from being saved:"
+      h4= "#{t('errors.template.header', model: t('activerecord.models.tariff').mb_chars.capitalize, count: @tariff.errors.count)}"
       ul
         - @tariff.errors.full_messages.each do |msg|
           li= msg

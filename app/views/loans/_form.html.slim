@@ -6,7 +6,7 @@
           | &times;
         span.sr-only
           | Close
-      h4= "#{pluralize(@loan.errors.count,"error")} prohibited this loan from being saved:"
+      h4= "#{t('errors.template.header', model: t('activerecord.models.loan').mb_chars.capitalize, count: @loan.errors.count)}"
       ul
         - @loan.errors.full_messages.each do |msg|
           li= msg
