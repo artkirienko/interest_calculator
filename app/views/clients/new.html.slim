@@ -1,4 +1,4 @@
-- provide(:title, 'New client')
+- provide(:title, t('new_client'))
 
 .page-header
   = link_to clients_path, class: 'btn btn-default' do
@@ -7,4 +7,4 @@
   h1
     = t('new_client')
 
-= render 'form'
+= render 'form', client: @client

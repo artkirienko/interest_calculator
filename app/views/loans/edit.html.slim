@@ -1,4 +1,4 @@
-- provide(:title, 'Editing loan')
+- provide(:title, t('editing_loan'))
 
 .page-header
   = link_to loans_path, class: 'btn btn-default' do
@@ -10,4 +10,4 @@
   h1
     = t('editing_loan')
 
-= render 'form'
+= render 'form', loan: @loan

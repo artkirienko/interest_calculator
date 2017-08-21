@@ -1,4 +1,4 @@
-- provide(:title, 'New payment')
+- provide(:title, t('new_payment'))
 
 .page-header
   = link_to payments_path, class: 'btn btn-default' do
@@ -7,4 +7,4 @@
   h1
     = t('new_payment')
 
-= render 'form'
+= render 'form', payment: @payment

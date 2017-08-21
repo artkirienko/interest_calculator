@@ -1,14 +1,14 @@
-= form_for(@loan, html: { class: "form-horizontal", role: "form" }) do |f|
-  - if @loan.errors.any?
+= form_for(loan, html: { class: "form-horizontal", role: "form" }) do |f|
+  - if loan.errors.any?
     .alert.alert-danger.alert-dismissable role="alert"
       button.close type="button" data-dismiss="alert"
         span aria-hidden="true"
           | &times;
         span.sr-only
           = t('close')
-      h4= "#{t('errors.template.header', model: t('activerecord.models.loan').mb_chars.capitalize, count: @loan.errors.count)}"
+      h4= "#{t('errors.template.header', model: t('activerecord.models.loan').mb_chars.capitalize, count: loan.errors.count)}"
       ul
-        - @loan.errors.full_messages.each do |msg|
+        - loan.errors.full_messages.each do |msg|
           li= msg
   .form-group
     = f.label :name, class: "col-sm-2 control-label"

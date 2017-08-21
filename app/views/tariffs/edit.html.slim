@@ -1,4 +1,4 @@
-- provide(:title, 'Editing tariff')
+- provide(:title, t('editing_tariff'))
 
 .page-header
   = link_to tariffs_path, class: 'btn btn-default' do
@@ -10,4 +10,4 @@
   h1
     = t('editing_tariff')
 
-= render 'form'
+= render 'form', tariff: @tariff
