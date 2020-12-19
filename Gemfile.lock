@@ -67,7 +67,7 @@ GEM
     erubi (1.6.1)
     erubis (2.7.0)
     execjs (2.7.0)
-    ffi (1.12.2)
+    ffi (1.14.1)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.6)
